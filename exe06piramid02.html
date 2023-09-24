@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTRUTURA EM PIRAMIDE</title>
+  </head>
+  
+  <body>
+      <input type="button" onclick="estrutura()" value="ESTRUTURA" />
+      <pre id="listagem"> 
+          </pre>
+      <script>
+          function estrutura() {
+              //Imprime a estrutura PIRAMIDE com laço em for
+              var piramide = document.getElementById("listagem"); 
+              piramide.innerHTML = ""; //Limpa e reinicia
+              for (i = 1; i <= 5; i++) {     
+
+              for (j = 1; j <= i; j++) { 
+              piramide.innerHTML += " * ";
+                  }
+                piramide.innerHTML += "\n"; 
+              }
+          }
+      </script>
+  </body>
+</html>

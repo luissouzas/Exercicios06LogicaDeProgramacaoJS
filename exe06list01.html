@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU EM LISTA</Menu></title>
+</head>
+<body>
+  <!--Aqui abaixo aparece o botão principal para acesso ao menu principal-->
+  <button id="botao" onclick="exibirMenu()">Clique aqui</button>
+  <div id="resultado"></div>
+
+  <script> //Aqui começa a programação em javascript
+    function exibirMenu() {       //Início da função/menu
+      var escolha = prompt("ESCOLHA NA LISTA O QUE VOCÊ QUER QUE FAÇA: \n1 - Imprimir números de 1 a 10 \n2 - Imprimir os números ímpares menores que 100 \n3 - Imprimir a tabuada do número 8 \n4 - Imprimir todas as tabuadas do número 1 ao 10");
+
+      switch (escolha) {
+        case "1":
+          imprimaOsNumerosDe1A10();
+          break;
+        case "2":
+          imprimaOsNumerosImpares();
+          break;
+        case "3":
+          imprimaSomenteTabuadaDo8();
+          break;
+        case "4":
+          imprimaTabuadaDe1ate10();
+          break;
+        default:
+          window.alert("OPÇÃO É INVÁLIDA!");
+      }
+    }
+    //Aparece na tela de 1 a 10
+    function imprimaOsNumerosDe1A10() {
+      var resultado = "";
+      for (var i = 1; i <= 10; i++) {
+        resultado += i + " ";
+      }
+      exibirResultado(resultado); // função para imprimir o resultado
+    }
+
+    //Aparece os números ímpares menores q 100
+    function imprimaOsNumerosImpares() {
+      var resultado = "";
+      for (var i = 1; i < 100; i += 2) {
+        resultado += i + " ";
+      }
+      exibirResultado(resultado);
+    }
+
+    //Imprime a tabuada apenas do número 8
+    function imprimaSomenteTabuadaDo8() {
+      var resultado = "";
+      for (var i = 1; i <= 10; i++) {
+        resultado += "8 x " + i + " = " + (8 * i) + "\n";
+      }
+      exibirResultado(resultado);
+    }
+
+    //Imprime a todas as tabuadas
+    function imprimaTabuadaDe1ate10() {
+      var resultado = "";
+      for (var i = 1; i <= 10; i++) {
+        resultado += "Tabuada do " + i + ":\n";
+        for (var j = 1; j <= 10; j++) {
+          resultado += i + " x "+j+" = " + (i * j) + "\n";
+        }
+        resultado += "\n";
+      }
+      exibirResultado(resultado);
+    }
+
+    function exibirResultado(resultado) { //mostra em tela o documento
+      var resultadoElemento = document.getElementById("resultado");//identificação
+      resultadoElemento.innerText = resultado;
+    }
+  </script>
+</body>
+</html>

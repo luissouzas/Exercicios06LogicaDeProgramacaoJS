@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALÁRIO</title>
+</head>
+<script src="salAlterado.js"></script>
+
+<script>
+
+    function salAlterado() { // Aqui se inicia a função 
+        let sal = parseFloat(prompt("Digite o salário"))
+        let alt = prompt('Digite o plano: \n A = 10%  \n B = 15%  \n C = 20%') 
+        switch (alt.toUpperCase()) { 
+
+            case 'A':  // Experimenta-se várias modificações como abaixo
+                window.alert("O seu salário é = " + ((sal * 1.10).toFixed(2))) 
+                break
+            case 'B':  // Experimenta-se várias modificações como abaixo
+                window.alert("O seu salário é = " + ((sal * 1.15).toFixed(2)))
+                break 
+            case 'C':  // Experimenta-se várias modificações como abaixo
+                window.alert("O seu salário é = " + ((sal * 1.20).toFixed(2)))
+                break 
+            default:
+                window.alert("Digite A, B ou C");
+                break;
+        }
+
+    }
+    salAlterado() 
+
+</script>
+</body>
+</html>
